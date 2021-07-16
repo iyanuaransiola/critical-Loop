@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning how to solve problems using code</title>
+</head>
+<body>
+    <h1>Critical Code thinking for enhanced Learning</h1>
+    <button id="btn">printing sum of numbers 1 to N</button>
+    <button id="bt1">only multiples of 3/5 are in this sum</button>
+    <button id="btn2">Multiplication to 12</button>
+
+
+    <script>
+        let btn = document.getElementById("btn");
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+
+        btn.addEventListener("click", sumNum);
+        btn1.addEventListener("click", evenMultiples);
+        btn2.addEventListener("click", multiply);
+
+        function sumNum() {
+            sum = 0;
+            num = 1;
+            n = parseInt(prompt('Enter a number:'));
+
+            while (num <= n) {
+                sum = sum + num;
+                num++
+            }
+            document.write(`The sum of numbers ${n} is ${sum}`);
+        }
+
+         function evenMultiples() {
+            sum = 0;
+            num = 3
+            n = parseInt(prompt('Enter a number:'));
+
+            for(let n = 0; 0 <= 17; n++){
+               if  (n % 2 == 0 || n % 5 == 0){
+                   sum += n;
+               }
+            }
+              document.write(`The sum of even multiples from ${n} is ${sum}`);
+        }
+
+        function multiply(){
+            let input = parseInt(prompt("Please enter number"));
+            document.write(`Multiples of ${input}: <br>` );
+
+            for(let i = 1; 1<= 12; i++){
+                result = input * i;
+
+                document.write(`${input} * ${i} = ${result} <br>`)
+            }
+            }
+
+
+
+    </script>
+
+    
+</body>
+</html>
